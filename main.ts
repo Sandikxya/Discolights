@@ -15,7 +15,7 @@ serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
                 # # # # #
                 # # # # #
                 `)
-        } else if (("command" as any) == ("heartbeat" as any)) {
+        } else if (command2 == "heartbeat") {
             for (let index = 0; index < 2; index++) {
                 basic.showIcon(IconNames.Heart)
                 basic.pause(500)
@@ -23,7 +23,7 @@ serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
                 basic.pause(500)
             }
         } else {
-            if (("command" as any) == ("sensitivity" as any)) {
+            if (command2 == "sensitivity") {
                 if (commandparts.length >= 1) {
                     sensitivity2 = parseFloat(commandparts[1])
                 }
