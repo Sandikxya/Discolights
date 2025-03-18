@@ -28,7 +28,7 @@ serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
                     sensitivity2 = parseFloat(commandparts[1])
                 }
             } else {
-                basic.showString("command")
+                basic.showString(command2)
             }
         }
     }
